@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/LTB-Beer/static/css/main.073c9b0a.css",
+    "main.js": "/LTB-Beer/static/js/main.fb9233a8.js",
+    "index.html": "/LTB-Beer/index.html",
+    "main.073c9b0a.css.map": "/LTB-Beer/static/css/main.073c9b0a.css.map",
+    "main.fb9233a8.js.map": "/LTB-Beer/static/js/main.fb9233a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.fb9233a8.js"
+  ]
+}
