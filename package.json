@@ -1,7 +1,6 @@
 {
   "name": "bear-beer",
   "version": "0.1.0",
-  "homepage": "https://ltb.github.io/LTB-Beer",
   "private": true,
   "dependencies": {
     "@fontsource/kaushan-script": "^4.5.10",
