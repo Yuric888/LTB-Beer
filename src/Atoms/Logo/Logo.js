@@ -1,15 +1,20 @@
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import imgLogo from "../../assets/images/logo_LTB.jpg";
-const Section = styled(motion.div)`
-  position: absolute;
+const Section = styled.div`
+  position: fixed;
   top: 1rem;
   left: 1rem;
-  z-index: 1;
+  z-index: 5;
 
-  display: flex;
-  align-items: center;
-  gap: 0 10px;
+  cursor: pointer;
+
+  a {
+    display: flex;
+    align-items: center;
+    gap: 0 10px;
+  }
 
   img {
     width: 6rem;
@@ -23,7 +28,7 @@ const Section = styled(motion.div)`
   }
 `;
 const pathVariants = {
-  hidden: { y: -200, opacity: 0 },
+  hidden: { y: -100, opacity: 0 },
   show: { y: 0, opacity: 1, transition: { duration: 2, ease: "easeInOut" } },
 };
 const textVariants = {
@@ -37,16 +42,18 @@ const textVariants = {
 const Logo = () => {
   return (
     <Section>
-      <motion.img
-        variants={pathVariants}
-        initial="hidden"
-        animate="show"
-        src={imgLogo}
-        alt="logo"
-      ></motion.img>
-      <motion.p variants={textVariants} initial="hidden" animate="show">
-        long thanh beer
-      </motion.p>
+      <Link to="/">
+        <motion.img
+          variants={pathVariants}
+          initial="hidden"
+          animate="show"
+          src={imgLogo}
+          alt="logo"
+        ></motion.img>
+        <motion.p variants={textVariants} initial="hidden" animate="show">
+          long thanh beer
+        </motion.p>
+      </Link>
     </Section>
   );
 };

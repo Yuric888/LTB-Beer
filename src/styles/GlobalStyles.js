@@ -32,5 +32,8 @@ input{
 button{
     cursor: pointer;
 }
+ul,li{
+    list-style: none;
+}
 `;
 export default GlobalStyles;

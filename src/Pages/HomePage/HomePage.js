@@ -1,12 +1,17 @@
 import Banner from "../../Organism/Banner/Banner";
-import Menus from "../../Organism/Menus/Menus";
-
+import styled from "styled-components";
+import Header from "../../Molecules/Header/Header";
+import Introduce from "../../Organism/Introduce/Introduce";
+const Section = styled.div`
+  height: auto;
+`;
 const HomePage = () => {
   return (
-    <div>
+    <Section>
+      <Header />
       <Banner />
-      <Menus />
-    </div>
+      <Introduce />
+    </Section>
   );
 };
 
