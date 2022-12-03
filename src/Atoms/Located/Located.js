@@ -1,11 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 const Section = styled.div`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 5;
-
   margin: 20px auto 0;
   color: ${(props) => props.theme.text};
 

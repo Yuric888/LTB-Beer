@@ -5,7 +5,7 @@ export const dark = {
   textRgba: "255,255,255",
 
   grey: "#bebebe",
-  font: "Kaushan Script",
+  font: "Exo",
   fontxs: "0.75em", // 1rem = 16px
   fontsm: "0.875em",
   fontmd: "1em",

@@ -3,11 +3,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import imgLogo from "../../assets/images/logo_LTB.jpg";
 const Section = styled.div`
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
-  z-index: 5;
-
+  padding: 20px;
   cursor: pointer;
 
   a {

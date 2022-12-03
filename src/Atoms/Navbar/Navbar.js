@@ -2,20 +2,6 @@ import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
-const Section = styled(motion.div)`
-  position: fixed;
-  right: 10%;
-  top: 0;
-  z-index: 5;
-
-  margin-top: 20px;
-  padding: 10px;
-`;
-const Items = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
 const Item = styled(motion.li)`
   color: ${(props) => props.theme.grey};
   padding: 0 20px;
@@ -69,3 +55,11 @@ const Navbar = () => {
 };
 
 export default Navbar;
+const Section = styled(motion.div)`
+  padding-right: 20px;
+`;
+const Items = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;

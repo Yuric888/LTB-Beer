@@ -1,6 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/kaushan-script";
 import "@fontsource/sirin-stencil";
+
 const GlobalStyles = createGlobalStyle`
     *, *::before, *::after{
         margin: 0;
@@ -13,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     }
 
     body{
-        font-family: "Sirin Stencil";
+       font-family: 'Exo', sans-serif;
         overflow-x: hidden;
     }
     h1,h2,h3,h4,h5,h6{
@@ -34,6 +35,28 @@ button{
 }
 ul,li{
     list-style: none;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  border-radius: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
 }
 `;
 export default GlobalStyles;
