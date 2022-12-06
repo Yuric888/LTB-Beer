@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import video from "../../assets/video-beer.mp4";
+import OverDarkLayout from "../OverDarkLayout/OverDarkLayout";
 const Section = styled.div`
   width: 100vw;
   height: 100vh;
@@ -12,16 +13,11 @@ const Section = styled.div`
     object-fit: cover;
   }
 `;
-const DarkOverlay = styled.div`
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  background-color: ${(props) => `rgba(${props.theme.bodyRgba},.4)`};
-`;
+
 const Video = () => {
   return (
     <Section>
-      <DarkOverlay />
+      <OverDarkLayout />
       <video src={video} type="video/mp4" autoPlay loop muted />
     </Section>
   );

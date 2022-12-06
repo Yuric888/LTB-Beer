@@ -4,7 +4,6 @@ import { useInView } from "react-intersection-observer";
 export const FadeInWhenVisible = ({ children }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView();
-  console.log("inView :>> ", inView);
   useEffect(() => {
     if (inView) {
       controls.start("visible");

@@ -1,18 +1,6 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
-const Section = styled.div`
-  margin: 20px auto 0;
-  color: ${(props) => props.theme.text};
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 10px;
-  h1 {
-    font-size: ${(props) => props.theme.fontlg};
-    cursor: pointer;
-  }
-`;
 const address = {
   hidden: { opacity: 0, x: -100 },
   show: {
@@ -20,6 +8,7 @@ const address = {
     x: 0,
     transition: {
       duration: 2,
+      delay: 1,
     },
   },
 };
@@ -30,20 +19,21 @@ const phone = {
     x: 0,
     transition: {
       duration: 2,
+      delay: 1,
     },
   },
 };
 const Located = () => {
   return (
     <Section>
-      <motion.h1
+      <motion.p
         variants={address}
         initial="hidden"
         animate="show"
         whileHover={{ color: "#bebebe" }}
       >
         40/7 Le Thi Hong
-      </motion.h1>
+      </motion.p>
       <motion.p variants={phone} initial="hidden" animate="show">
         (84) 12345678
       </motion.p>
@@ -52,3 +42,23 @@ const Located = () => {
 };
 
 export default Located;
+
+const Section = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 10px;
+  width: 100%;
+  padding: 6px;
+  background-color: ${(props) => props.theme.body};
+  p {
+    font-size: ${(props) => props.theme.fontsm};
+    color: ${(props) => props.theme.text};
+
+    cursor: pointer;
+  }
+  p {
+    font-size: ${(props) => props.theme.fontsm};
+    color: ${(props) => props.theme.text};
+  }
+`;
