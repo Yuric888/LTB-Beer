@@ -80,6 +80,7 @@ const Name = styled.h2`
   font-size: ${(props) => props.theme.fontxl};
   text-transform: uppercase;
   font-weight: 700;
+  color: ${(props) => props.theme.textTitle};
 `;
 const SubName = styled.p`
   font-size: ${(props) => props.theme.fontmd};

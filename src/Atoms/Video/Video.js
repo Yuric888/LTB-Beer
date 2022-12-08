@@ -2,7 +2,7 @@ import styled from "styled-components";
 import video from "../../assets/video-beer.mp4";
 import OverDarkLayout from "../OverDarkLayout/OverDarkLayout";
 const Section = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
   position: relative;

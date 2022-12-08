@@ -25,27 +25,27 @@ const Navbar = () => {
   return (
     <Section variants={container} initial="hidden" animate="show">
       <Items>
-        <Item
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-        >
-          <NavLink to="/">
+        <Item>
+          <NavLink
+            to="/"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             <p>Home</p>
           </NavLink>
         </Item>
-        <Item
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-        >
-          <NavLink to="/menus">
+        <Item>
+          <NavLink
+            to="/menus"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             <p>Menus</p>
           </NavLink>
         </Item>
-        <Item
-          whileHover={{ scale: 1.1, y: -5 }}
-          whileTap={{ scale: 0.9, y: 0 }}
-        >
-          <NavLink to="/contact">
+        <Item>
+          <NavLink
+            to="/contact"
+            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          >
             <p>Contact Us</p>
           </NavLink>
         </Item>
@@ -56,10 +56,34 @@ const Navbar = () => {
 
 export default Navbar;
 const Section = styled(motion.div)`
-  padding-right: 20px;
+  margin-right: 10%;
 `;
 const Items = styled.ul`
   display: flex;
   justify-content: center;
   align-items: center;
+  li {
+    a {
+      position: relative;
+
+      &::before {
+        position: absolute;
+        z-index: 20;
+        bottom: -5px;
+        left: 0;
+        /* transform: translateX(-50%); */
+        height: 2px;
+        content: "";
+        width: 100%;
+        transform: scale(0);
+        transition: all 0.2s ease;
+        background-color: ${(props) => props.theme.text};
+      }
+      &:hover {
+        &::before {
+          transform: scale(1);
+        }
+      }
+    }
+  }
 `;

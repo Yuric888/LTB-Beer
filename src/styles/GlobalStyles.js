@@ -12,7 +12,9 @@ const GlobalStyles = createGlobalStyle`
         color: inherit;
         text-decoration: none;
     }
-
+html{
+    scroll-behavior: smooth;
+}
     body{
        font-family: 'Exo', sans-serif;
         overflow-x: hidden;

@@ -1,4 +1,3 @@
-import { useRef } from "react";
 import { Outlet } from "react-router-dom";
 import styled from "styled-components";
 import Header from "../../Molecules/Header/Header";
@@ -8,8 +7,6 @@ import { motion } from "framer-motion";
 import { FadeInWhenVisible } from "../../utils/FadeInWhenVisible";
 const Section = styled.div``;
 const Menus = () => {
-  const ref = useRef(null);
-
   return (
     <Section>
       <Header />
@@ -29,7 +26,7 @@ const Menus = () => {
         </motion.h2>
       </Title>
       <FadeInWhenVisible>
-        <NavMenu ref={ref} />
+        <NavMenu />
       </FadeInWhenVisible>
       <FadeInWhenVisible>
         <Outlet />

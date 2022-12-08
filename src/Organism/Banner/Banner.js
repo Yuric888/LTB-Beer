@@ -42,9 +42,10 @@ const Banner = () => {
 export default Banner;
 
 const Section = styled.div`
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   position: relative;
+  margin-top: 0;
 `;
 const Title = styled(motion.div)`
   position: absolute;

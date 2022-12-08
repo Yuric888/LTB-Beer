@@ -44,13 +44,18 @@ const Located = () => {
 export default Located;
 
 const Section = styled.div`
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  transform: translateX(-50%);
+
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 0 10px;
-  width: 100%;
+
   padding: 6px;
-  background-color: ${(props) => props.theme.body};
+  background-color: transparent;
   p {
     font-size: ${(props) => props.theme.fontsm};
     color: ${(props) => props.theme.text};

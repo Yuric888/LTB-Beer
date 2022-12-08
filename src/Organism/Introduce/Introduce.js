@@ -31,7 +31,7 @@ const Section = styled.div`
 const Title = styled(motion.h1)`
   font-size: ${(props) => props.theme.fontxxxl};
   font-family: ${(props) => props.theme.font};
-  color: ${(props) => props.theme.body};
+  color: ${(props) => props.theme.textTitle};
   text-shadow: 2px 2px 2px ${(props) => props.theme.grey};
 
   text-transform: capitalize;

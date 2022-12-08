@@ -1,7 +1,7 @@
-import { forwardRef } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { motion } from "framer-motion";
+import { useRef } from "react";
 
 const VariantHover = {
   tap: {
@@ -16,30 +16,21 @@ const VariantHover = {
   },
 };
 
-const NavMenu = (props, ref) => {
-  const handleClick = () => {
-    ref.current?.scrollIntoView({ behavior: "smooth", inline: "center" });
+const NavMenu = () => {
+  const titleRef = useRef();
+  const handleScroll = (event) => {
+    titleRef.current.scrollIntoView({ behavior: "smooth" });
   };
   return (
-    <Section ref={ref}>
+    <Section ref={titleRef}>
       <ul>
-        <motion.li
-          onClick={handleClick}
-          whileHover="hover"
-          whileTap="tap"
-          variants={VariantHover}
-        >
-          <NavLink to="" end>
+        <motion.li whileHover="hover" whileTap="tap" variants={VariantHover}>
+          <NavLink to="" end onClick={handleScroll}>
             <span>beer</span>
           </NavLink>
         </motion.li>
-        <motion.li
-          onClick={handleClick}
-          whileHover="hover"
-          whileTap="tap"
-          variants={VariantHover}
-        >
-          <NavLink to="dinner">
+        <motion.li whileHover="hover" whileTap="tap" variants={VariantHover}>
+          <NavLink to="dinner" onClick={handleScroll}>
             <span>dinner</span>
           </NavLink>
         </motion.li>
@@ -48,7 +39,7 @@ const NavMenu = (props, ref) => {
   );
 };
 
-export default forwardRef(NavMenu);
+export default NavMenu;
 
 const Section = styled.div`
   width: 100vw;

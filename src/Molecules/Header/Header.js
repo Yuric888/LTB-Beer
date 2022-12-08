@@ -17,10 +17,8 @@ const Header = () => {
 
   return (
     <Section>
-      <Title>
-        <Located />
-      </Title>
       <Content scroll={scroll}>
+        <Located />
         <Logo />
         <Navbar />
       </Content>
@@ -32,13 +30,10 @@ export default Header;
 const Section = styled.div`
   position: relative;
 `;
-const Title = styled.div`
-  width: 100%;
-`;
 const Content = styled.div`
-  position: ${(props) => (props.scroll ? "fixed" : "absolute")};
-  top: ${(props) => (props.scroll ? "0" : "30px")};
-  z-index: 10;
+  position: fixed;
+  top: 0;
+  z-index: 20;
   display: flex;
   justify-content: space-between;
   align-items: center;

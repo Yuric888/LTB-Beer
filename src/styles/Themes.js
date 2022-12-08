@@ -3,6 +3,7 @@ export const dark = {
   text: "#fff",
   bodyRgba: "32,32,32",
   textRgba: "255,255,255",
+  textTitle: "#B28564",
 
   grey: "#bebebe",
   font: "Exo",
