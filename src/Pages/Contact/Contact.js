@@ -2,6 +2,7 @@ import styled from "styled-components";
 import Header from "../../Molecules/Header/Header";
 import img from "../../assets/images/beer-contact.png";
 import OverDarkLayout from "../../Atoms/OverDarkLayout/OverDarkLayout";
+import Hours from "../../Organism/Hours/Hours";
 const Section = styled.div`
   /* height: 100vh; */
 `;
@@ -11,6 +12,7 @@ const Contact = () => {
       <Header />
       <OverDarkLayout />
       <Image src={img} alt="beer-contact"></Image>
+      <Hours />
     </Section>
   );
 };
