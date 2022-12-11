@@ -26,16 +26,22 @@ const phone = {
 const Located = () => {
   return (
     <Section>
-      <motion.p
-        variants={address}
-        initial="hidden"
-        animate="show"
-        whileHover={{ color: "#bebebe" }}
+      <a
+        rel="noreferrer"
+        target="_blank"
+        href="https://www.google.com/maps/search/T%C3%B2a+s102.01S13+Vinhomes+grand+park/@10.8382282,106.8302251,20z?hl=vi-VN"
       >
-        40/7 Le Thi Hong
-      </motion.p>
+        <motion.p
+          variants={address}
+          initial="hidden"
+          animate="show"
+          whileHover={{ color: "#bebebe" }}
+        >
+          s102.01S13 Vinhomes grand park
+        </motion.p>
+      </a>
       <motion.p variants={phone} initial="hidden" animate="show">
-        (84) 12345678
+        (+84) 969786928
       </motion.p>
     </Section>
   );
@@ -57,13 +63,13 @@ const Section = styled.div`
   padding: 6px;
   background-color: transparent;
   p {
-    font-size: ${(props) => props.theme.fontsm};
+    font-size: ${(props) => props.theme.fontmd};
     color: ${(props) => props.theme.text};
 
-    cursor: pointer;
+    text-transform: capitalize;
   }
-  p {
-    font-size: ${(props) => props.theme.fontsm};
-    color: ${(props) => props.theme.text};
+  @media (max-width: 980px) {
+    display: none;
+    opacity: 0;
   }
 `;

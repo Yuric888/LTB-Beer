@@ -14,7 +14,6 @@ const Header = () => {
     }
   };
   window.addEventListener("scroll", changeBackground);
-
   return (
     <Section>
       <Content scroll={scroll}>
@@ -37,9 +36,11 @@ const Content = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   background-color: ${(props) =>
     props.scroll ? `rgba(${props.theme.bodyRgba}, .8)` : "transparent"};
-  height: ${(props) => (props.scroll ? "60px" : "auto")};
   transition: 0.5s;
+  @media (min-width: 1124px) {
+    padding-right: 5%;
+  }
 `;

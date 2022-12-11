@@ -51,14 +51,39 @@ const Section = styled.div`
   }
 
   img {
-    width: 5rem;
     height: auto;
     transition: 0.5s;
   }
   p {
-    font-size: ${(props) => props.theme.fontlg};
     font-family: ${(props) => props.theme.font};
     text-transform: uppercase;
     color: ${(props) => props.theme.text};
+  }
+
+  @media (max-width: 991px) {
+    img {
+      width: 4rem;
+    }
+
+    p {
+      font-size: ${(props) => props.theme.md};
+    }
+  }
+  @media (max-width: 500px) {
+    img {
+      width: 3rem;
+    }
+
+    p {
+      font-size: ${(props) => props.theme.fontsm};
+    }
+  }
+  @media (min-width: 992px) {
+    img {
+      width: 5rem;
+    }
+    p {
+      font-size: ${(props) => props.theme.fontlg};
+    }
   }
 `;
