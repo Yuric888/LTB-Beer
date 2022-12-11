@@ -133,6 +133,7 @@ const Items = styled.ul`
     z-index: 10;
     width: 100vw;
     height: 100vh;
+    opacity: ${(props) => (props.mobile === true ? "1" : "0")};
     overflow: hidden;
     background-color: ${(props) => props.theme.body};
     transition: all 0.5s ease;
@@ -162,14 +163,12 @@ const Burger = styled.div`
   opacity: 1;
 
   position: fixed;
-  top: 5%;
-  right: 10%;
   cursor: pointer;
   user-select: none;
   order: -1;
   z-index: 100;
-  width: 1.75rem;
-  height: 1rem;
+  width: 2rem;
+  height: 2rem;
   border: none;
   outline: none;
   background: none;
