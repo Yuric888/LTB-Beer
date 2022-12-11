@@ -74,7 +74,6 @@ const Title = styled(motion.div)`
     pointer-events: none;
   }
   h1 {
-    font-size: ${(props) => props.theme.fontBig};
     color: ${(props) => props.theme.text};
     font-family: ${(props) => props.theme.font};
     text-shadow: 2px 2px 2px ${(props) => props.theme.body};
@@ -83,11 +82,26 @@ const Title = styled(motion.div)`
     pointer-events: none;
   }
   h2 {
-    font-size: ${(props) => props.theme.fontlg};
     color: ${(props) => props.theme.text};
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
     text-transform: capitalize;
     font-weight: 500;
     pointer-events: none;
+  }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: ${(props) => props.theme.fontxxxl};
+    }
+    h2 {
+      font-size: ${(props) => props.theme.fontmd};
+    }
+  }
+  @media (min-width: 501px) {
+    h1 {
+      font-size: ${(props) => props.theme.fontBig};
+    }
+    h2 {
+      font-size: ${(props) => props.theme.fontlg};
+    }
   }
 `;

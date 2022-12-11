@@ -5,7 +5,7 @@ const Introduce = () => {
     <Section>
       <Title>craft beer</Title>
       <SubTitle>
-        Thuộc dòng Lager, màu vàng rơm, bọt trắng mịn, đọ cồn 4,3ABV.
+        Thuộc dòng Lager, màu vàng rơm, bọt trắng mịn, độ cồn 4,3ABV.
       </SubTitle>
       <br />
       <SubTitle>
@@ -25,11 +25,8 @@ const Section = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
-
-  /* background-color: ${(props) => props.theme.grey}; */
 `;
 const Title = styled(motion.h1)`
-  font-size: ${(props) => props.theme.fontxxxl};
   font-family: ${(props) => props.theme.font};
   color: ${(props) => props.theme.textTitle};
   text-shadow: 2px 2px 2px ${(props) => props.theme.grey};
@@ -39,6 +36,15 @@ const Title = styled(motion.h1)`
   font-weight: 600;
   text-align: center;
   font-style: italic;
+  @media (max-width: 499px) {
+    font-size: ${(props) => props.theme.fontxl};
+  }
+  @media (min-width: 500px) and (max-width: 1023px) {
+    font-size: ${(props) => props.theme.fontxxl};
+  }
+  @media (min-width: 1024px) {
+    font-size: ${(props) => props.theme.fontxxxl};
+  }
 `;
 const SubTitle = styled(motion.p)`
   font-size: ${(props) => props.theme.fontlg};
@@ -48,4 +54,12 @@ const SubTitle = styled(motion.p)`
   margin: 5px auto;
   text-align: justify;
   font-weight: 400;
+  @media (max-width: 1023px) {
+    width: 100vw;
+    padding: 0 0.5em;
+    font-size: ${(props) => props.theme.fontmd};
+  }
+  @media (min-width: 1024px) {
+    font-size: ${(props) => props.theme.fontlg};
+  }
 `;
