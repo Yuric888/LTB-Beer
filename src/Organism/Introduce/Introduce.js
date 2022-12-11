@@ -22,7 +22,7 @@ const Introduce = () => {
 export default Introduce;
 
 const Section = styled.div`
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
 

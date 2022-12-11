@@ -57,7 +57,7 @@ const Hops = () => {
 
 export default Hops;
 const Section = styled.div`
-  width: 100%;
+  width: 100vw;
   padding: 0;
   min-height: 100vh;
   margin: 5% 0;

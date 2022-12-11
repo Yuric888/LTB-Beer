@@ -17,7 +17,10 @@ const container = {
 };
 const Navbar = () => {
   const [mobile, setMobile] = useState(false);
-
+  const handleClick = () => {
+    setMobile(false);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <Section
       variants={container}
@@ -32,32 +35,30 @@ const Navbar = () => {
       </Burger>
       <Items mobile={mobile}>
         <Item>
-          <NavLink
-            to="/"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
+          <NavLink to="/" onClick={handleClick}>
             <p>Home</p>
           </NavLink>
         </Item>
         <Item>
-          <NavLink
-            to="/menus"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
+          <NavLink to="/menus" onClick={handleClick}>
             <p>Menus</p>
           </NavLink>
         </Item>
         <Item>
-          <NavLink
-            to="/contact"
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          >
+          <NavLink to="/contact" onClick={handleClick}>
             <p>Contact Us</p>
           </NavLink>
         </Item>
         <Unline></Unline>
         <Address>
-          <Located />
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.google.com/maps/search/T%C3%B2a+s102.01S13+Vinhomes+grand+park/@10.8382282,106.8302251,20z?hl=vi-VN"
+          >
+            <p>s102.01S13 Vinhomes grand park</p>
+          </a>
+          <p>(+84) 969-786-928 - Dũng</p>
         </Address>
       </Items>
     </Section>
@@ -66,6 +67,18 @@ const Navbar = () => {
 
 export default Navbar;
 const Address = styled.div`
+  color: ${(props) => props.theme.textTitle};
+  text-transform: capitalize;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em 0;
+  a {
+    &:hover {
+      color: ${(props) => props.theme.text};
+    }
+  }
   @media (min-width: 680px) {
     display: none;
     opacity: 0;
@@ -73,7 +86,7 @@ const Address = styled.div`
 `;
 const Unline = styled.div`
   width: 80%;
-  height: 1px;
+  height: 0.5px;
   background-color: ${(props) => props.theme.text};
   @media (min-width: 680px) {
     display: none;
@@ -149,7 +162,7 @@ const Burger = styled.div`
   opacity: 1;
 
   position: fixed;
-  top: 10%;
+  top: 5%;
   right: 10%;
   cursor: pointer;
   user-select: none;
