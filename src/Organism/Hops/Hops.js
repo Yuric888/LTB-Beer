@@ -58,12 +58,21 @@ const Hops = () => {
 export default Hops;
 const Section = styled.div`
   width: 100vw;
-  padding: 0;
+  padding: 0 5%;
   min-height: 100vh;
-  margin: 5% 0;
+  margin: 10% 0;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  /* grid-template-rows: repeat(2, 1fr); */
+  @media (max-width: 680px) {
+    display: flex;
+    flex-direction: column;
+    gap: 2em 0 !important;
+  }
+  @media (max-width: 992px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em 0;
+  }
   @media (min-width: 1440px) {
     padding: 0 80px;
   }

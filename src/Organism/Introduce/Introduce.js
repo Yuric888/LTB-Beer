@@ -25,6 +25,7 @@ const Section = styled.div`
   width: 100vw;
   display: flex;
   flex-direction: column;
+  padding: 5%;
 `;
 const Title = styled(motion.h1)`
   font-family: ${(props) => props.theme.font};
@@ -32,7 +33,6 @@ const Title = styled(motion.h1)`
   text-shadow: 2px 2px 2px ${(props) => props.theme.grey};
 
   text-transform: capitalize;
-  padding: 20px 0;
   font-weight: 600;
   text-align: center;
   font-style: italic;
@@ -50,13 +50,12 @@ const SubTitle = styled(motion.p)`
   font-size: ${(props) => props.theme.fontlg};
   color: ${(props) => props.theme.body};
 
-  width: 40vw;
+  width: 60vw;
   margin: 5px auto;
   text-align: justify;
   font-weight: 400;
   @media (max-width: 1023px) {
-    width: 100vw;
-    padding: 0 0.5em;
+    width: 100%;
     font-size: ${(props) => props.theme.fontmd};
   }
   @media (min-width: 1024px) {
