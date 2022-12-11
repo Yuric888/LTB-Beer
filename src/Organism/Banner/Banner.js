@@ -64,17 +64,31 @@ const Title = styled(motion.div)`
     gap: 0 20px;
   }
   h1 {
-    font-size: ${(props) => props.theme.fontBig};
     color: ${(props) => props.theme.text};
     font-family: ${(props) => props.theme.font};
     text-shadow: 2px 2px 2px ${(props) => props.theme.body};
     font-style: italic;
   }
   h2 {
-    font-size: ${(props) => props.theme.fontlg};
     color: ${(props) => props.theme.text};
     text-shadow: 1px 1px 1px ${(props) => props.theme.body};
     text-transform: capitalize;
     font-weight: 500;
+  }
+  @media (max-width: 500px) {
+    h1 {
+      font-size: ${(props) => props.theme.fontxxxl};
+    }
+    h2 {
+      font-size: ${(props) => props.theme.fontmd};
+    }
+  }
+  @media (min-width: 501px) {
+    h1 {
+      font-size: ${(props) => props.theme.fontBig};
+    }
+    h2 {
+      font-size: ${(props) => props.theme.fontlg};
+    }
   }
 `;

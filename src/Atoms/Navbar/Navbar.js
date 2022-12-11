@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import Located from "../Located/Located";
 
 const container = {
   hidden: { opacity: 0, y: -200 },
@@ -161,7 +160,6 @@ const Item = styled(motion.li)`
 const Burger = styled.div`
   display: inline-block;
   opacity: 1;
-
   position: fixed;
   cursor: pointer;
   user-select: none;
