@@ -39,6 +39,7 @@ const Content = styled.div`
   width: 100vw;
   background-color: ${(props) =>
     props.scroll ? `rgba(${props.theme.bodyRgba}, .8)` : "transparent"};
+  height: ${(props) => (props.scroll ? `60px` : `${props.theme.navHeight}`)};
   transition: 0.5s;
   @media (min-width: 1124px) {
     padding-right: 5%;
