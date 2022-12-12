@@ -27,15 +27,19 @@ const VectorBeer = () => {
 export default VectorBeer;
 const Container = styled.div`
   width: 100vw;
-  height: 70vh;
   background: url("https://images.getbento.com/accounts/003525f50c0c2cca51a388b83adc3823/media/images/37932Ike_Oak_pattern.png?w=1800&fit=max&auto=compress,format&h=1800");
-  width: 100%;
   background-size: 600px;
   background-position: top;
   overflow: visible;
   margin-top: 8%;
   margin-bottom: 8%;
-  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  @media (max-width: 1023px) {
+    flex-direction: column;
+    padding: 2em;
+  }
 `;
 const Left = styled.div`
   width: 50%;
@@ -43,14 +47,19 @@ const Left = styled.div`
   background: ${(props) => props.theme.body};
   color: ${(props) => props.theme.text};
 
-  position: absolute;
-  bottom: -10%;
-  left: 10%;
-  z-index: 1;
-
-  padding-left: 50px;
+  padding: 8em 3em;
   display: flex;
   align-items: center;
+  @media (max-width: 1023px) {
+    width: 100%;
+    justify-content: center;
+    padding: 5em 3em;
+  }
+  @media (min-width: 1024px) {
+    position: relative;
+    z-index: 5;
+    transform: translate(3em, 5em);
+  }
 `;
 const Content = styled.div`
   display: flex;
@@ -60,20 +69,23 @@ const Content = styled.div`
 `;
 const Right = styled.div`
   width: 50%;
-  height: 90%;
+  height: auto;
   background: ${(props) => props.theme.body};
-
-  position: absolute;
-  right: 10%;
-  top: -10%;
-  z-index: 2;
 
   padding: 5px;
 
   img {
     display: block;
     width: 100%;
-    height: 100%;
+    height: auto;
+  }
+  @media (max-width: 1023px) {
+    width: 100%;
+  }
+  @media (min-width: 1024px) {
+    position: relative;
+    z-index: 10;
+    transform: translate(-3em, -5em);
   }
 `;
 const Name = styled.h2`
