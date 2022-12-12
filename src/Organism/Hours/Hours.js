@@ -47,16 +47,20 @@ const Hours = () => {
 
 export default Hours;
 const Section = styled.div`
-  /* height: 90vh; */
   width: 100vw;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 80px;
-  margin: 10% auto;
+  padding: 0 3em;
+  margin: 5em auto;
+  @media (max-width: 1023px) {
+    flex-direction: column-reverse;
+    gap: 3em 0;
+  }
 `;
 const Image = styled.div`
-  width: 30%;
+  width: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,29 +70,35 @@ const Image = styled.div`
     width: 80%;
     height: auto;
   }
+  @media (max-width: 1023px) {
+    width: 50vw;
+  }
 `;
 const Container = styled.div`
-  width: 60%;
+  width: 60vw;
   color: ${(props) => props.theme.body};
   text-align: center;
+  @media (max-width: 1023px) {
+    width: 100vw;
+    padding: 0 2em;
+  }
 `;
-// const Title = styled.h1`
-//   text-transform: uppercase;
-//   color: ${(props) => props.theme.textTitle};
-//   font-size: ${(props) => props.theme.fontxxl};
-// `;
 const Content = styled.div`
   margin-top: 2em;
-  margin-left: 2em;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  @media (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 3em 0;
+  }
 `;
 const Left = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1em 0;
   text-align: left;
-  margin-right: 20px;
+  width: 100%;
   h2 {
     width: 100%;
     text-align: center;
@@ -122,6 +132,7 @@ const Right = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
   h2 {
     width: 100%;
     text-align: center;
@@ -152,7 +163,12 @@ const Gif = styled.img`
   left: 50%;
   transform: translateX(-50%);
   object-fit: cover;
+  pointer-events: none;
 
   width: 15em !important;
   height: 15em !important;
+  @media (max-width: 767px) {
+    display: none;
+    opacity: 0;
+  }
 `;

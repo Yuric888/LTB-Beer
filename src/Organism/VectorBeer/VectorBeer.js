@@ -4,6 +4,9 @@ import img from "../../assets/images/food-beer-hp.png";
 import { FadeInWhenVisible } from "../../utils/FadeInWhenVisible";
 
 const VectorBeer = () => {
+  const handleClick = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
   return (
     <Container>
       <Left>
@@ -11,7 +14,7 @@ const VectorBeer = () => {
           <Content>
             <Name>the beer vector</Name>
             <SubName>Enjoy our selection of handcrafted brews !</SubName>
-            <ButtonView to="/menus">
+            <ButtonView to="/menus" onClick={handleClick}>
               <span>view menu</span>
             </ButtonView>
           </Content>

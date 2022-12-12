@@ -36,6 +36,7 @@ const Title = styled(motion.h1)`
   font-weight: 600;
   text-align: center;
   font-style: italic;
+  margin-bottom: 1em;
   @media (max-width: 499px) {
     font-size: ${(props) => props.theme.fontxl};
   }
