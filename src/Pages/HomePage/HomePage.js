@@ -7,6 +7,7 @@ import { FadeInWhenVisible } from "../../utils/FadeInWhenVisible";
 import VectorBeer from "../../Organism/VectorBeer/VectorBeer";
 import Hours from "../../Organism/Hours/Hours";
 import Hops from "../../Organism/Hops/Hops";
+import Footer from "../../Organism/Footer/Footer";
 const Section = styled.div`
   height: auto;
 `;
@@ -29,6 +30,9 @@ const HomePage = () => {
       </FadeInWhenVisible> */}
       <FadeInWhenVisible>
         <Hours />
+      </FadeInWhenVisible>
+      <FadeInWhenVisible>
+        <Footer />
       </FadeInWhenVisible>
     </Section>
   );

@@ -5,6 +5,7 @@ import NavMenu from "../../Molecules/NavMenu/NavMenu";
 import SlickComponent from "../../Organism/Slider/Slider";
 import { motion } from "framer-motion";
 import { FadeInWhenVisible } from "../../utils/FadeInWhenVisible";
+import Footer from "../../Organism/Footer/Footer";
 const Section = styled.div`
   width: 100vw;
 `;
@@ -32,6 +33,9 @@ const Menus = () => {
       </FadeInWhenVisible>
       <FadeInWhenVisible>
         <Outlet />
+      </FadeInWhenVisible>
+      <FadeInWhenVisible>
+        <Footer />
       </FadeInWhenVisible>
     </Section>
   );

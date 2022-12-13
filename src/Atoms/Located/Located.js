@@ -29,7 +29,7 @@ const Located = () => {
       <a
         rel="noreferrer"
         target="_blank"
-        href="https://www.google.com/maps/search/T%C3%B2a+s102.01S13+Vinhomes+grand+park/@10.8382282,106.8302251,20z?hl=vi-VN"
+        href="https://www.google.com/maps/place/10%C2%B050'14.9%22N+106%C2%B049'50.4%22E/@10.836882,106.8299115,18z/data=!4m5!3m4!1s0x0:0xefb544ac43d09199!8m2!3d10.8374737!4d106.8306612"
       >
         <motion.p
           variants={address}
