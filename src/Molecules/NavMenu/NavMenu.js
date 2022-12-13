@@ -43,6 +43,7 @@ export default NavMenu;
 
 const Section = styled.div`
   width: 100vw;
+  overflow: hidden;
   margin: 0 auto;
   padding: 80px 0;
   ul {

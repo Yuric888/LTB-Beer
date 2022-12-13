@@ -17,6 +17,9 @@ const Section = styled.div`
     &:before {
       font-size: 50px;
       color: white;
+      @media (max-width: 600px) {
+        font-size: 30px;
+      }
     }
   }
   button.slick-next {
@@ -25,6 +28,9 @@ const Section = styled.div`
     &:before {
       font-size: 50px;
       color: white;
+      @media (max-width: 600px) {
+        font-size: 30px;
+      }
     }
   }
 `;

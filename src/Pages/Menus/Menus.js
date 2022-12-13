@@ -5,7 +5,9 @@ import NavMenu from "../../Molecules/NavMenu/NavMenu";
 import SlickComponent from "../../Organism/Slider/Slider";
 import { motion } from "framer-motion";
 import { FadeInWhenVisible } from "../../utils/FadeInWhenVisible";
-const Section = styled.div``;
+const Section = styled.div`
+  width: 100vw;
+`;
 const Menus = () => {
   return (
     <Section>
@@ -88,7 +90,18 @@ const Title = styled(motion.div)`
     font-weight: 500;
     pointer-events: none;
   }
-  @media (max-width: 500px) {
+  @media (max-width: 499px) {
+    div {
+      gap: 0;
+    }
+    h1 {
+      font-size: ${(props) => props.theme.fontxxl};
+    }
+    h2 {
+      font-size: ${(props) => props.theme.fontmd};
+    }
+  }
+  @media (min-width: 500px) and (max-width: 767px) {
     h1 {
       font-size: ${(props) => props.theme.fontxxxl};
     }
@@ -96,7 +109,12 @@ const Title = styled(motion.div)`
       font-size: ${(props) => props.theme.fontmd};
     }
   }
-  @media (min-width: 501px) {
+  @media (min-width: 768px) and (max-width: 959px) {
+    h1 {
+      font-size: ${(props) => props.theme.fontmedium};
+    }
+  }
+  @media (min-width: 960px) {
     h1 {
       font-size: ${(props) => props.theme.fontBig};
     }
