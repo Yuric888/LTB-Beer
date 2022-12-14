@@ -129,7 +129,7 @@ const Items = styled.ul`
     position: fixed;
     top: ${(props) => (props.mobile === true ? `0` : "-100%")};
     left: 0;
-    z-index: 10;
+    z-index: 50;
     width: 100vw;
     height: 100vh;
     opacity: ${(props) => (props.mobile === true ? "1" : "0")};

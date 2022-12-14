@@ -65,7 +65,7 @@ const Container = styled.div`
   inset: 0;
   width: 100%;
   height: 100%;
-  z-index: 20;
+  z-index: 10;
 
   display: flex;
   flex-direction: row;
@@ -159,7 +159,7 @@ const Underline = styled.div`
   height: 0.5px;
   background-color: ${(props) => props.theme.text};
   bottom: 5em;
-  z-index: 20;
+  z-index: 10;
   left: 50%;
   transform: translateX(-50%);
   @media (max-width: 500px) {
