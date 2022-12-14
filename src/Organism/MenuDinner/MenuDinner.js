@@ -16,7 +16,7 @@ export default MenuDinner;
 const Section = styled.div`
   margin: 0 auto 50px;
   width: 1050px;
-  padding: 20px 30px;
+  padding: 0 2em;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px 40px;
