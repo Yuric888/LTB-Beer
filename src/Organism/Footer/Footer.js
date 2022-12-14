@@ -107,6 +107,7 @@ const About = styled.div`
     text-align: center;
   }
   span {
+    padding: 0 1em;
     margin-top: 2em;
     text-align: left;
   }
