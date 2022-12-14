@@ -162,4 +162,9 @@ const Underline = styled.div`
   z-index: 20;
   left: 50%;
   transform: translateX(-50%);
+  @media (max-width: 500px) {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
 `;
