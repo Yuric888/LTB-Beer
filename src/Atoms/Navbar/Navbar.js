@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
@@ -20,13 +20,14 @@ const Navbar = () => {
     setMobile(false);
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
+  useLayoutEffect(() => {
+    if (mobile === true) {
+      document.body.style.overflow = "hidden";
+    }
+    return () => (document.body.style.overflow = "scroll");
+  }, [mobile]);
   return (
-    <Section
-      variants={container}
-      initial="hidden"
-      animate="show"
-      mobile={mobile}
-    >
+    <Section variants={container} initial="hidden" animate="show">
       <Burger onClick={() => setMobile(!mobile)} mobile={mobile}>
         <span></span>
         <span></span>
