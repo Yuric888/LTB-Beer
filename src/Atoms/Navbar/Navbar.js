@@ -22,9 +22,9 @@ const Navbar = () => {
   };
   useLayoutEffect(() => {
     if (mobile === true) {
-      document.body.style.overflow = "hidden";
+      document.body.style.overflowY = "hidden";
     }
-    return () => (document.body.style.overflow = "scroll");
+    return () => (document.body.style.overflowY = "scroll");
   }, [mobile]);
   return (
     <Section variants={container} initial="hidden" animate="show">

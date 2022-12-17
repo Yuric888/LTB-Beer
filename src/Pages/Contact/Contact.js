@@ -4,10 +4,12 @@ import img from "../../assets/images/beer-contact.png";
 import OverDarkLayout from "../../Atoms/OverDarkLayout/OverDarkLayout";
 import Hours from "../../Organism/Hours/Hours";
 import { FadeInWhenVisible } from "../../utils/FadeInWhenVisible";
-import Maps from "../../Organism/Maps/Maps";
+// import Maps from "../../Organism/Maps/Maps";
 import Footer from "../../Organism/Footer/Footer";
 const Section = styled.div`
-  /* height: 100vh; */
+  width: 100vw;
+  position: relative;
+  height: 100vh;
 `;
 const Contact = () => {
   return (
@@ -20,9 +22,9 @@ const Contact = () => {
       <FadeInWhenVisible>
         <Hours />
       </FadeInWhenVisible>
-      <FadeInWhenVisible>
+      {/* <FadeInWhenVisible>
         <Maps />
-      </FadeInWhenVisible>
+      </FadeInWhenVisible> */}
       <FadeInWhenVisible>
         <Footer />
       </FadeInWhenVisible>
@@ -33,7 +35,7 @@ const Contact = () => {
 export default Contact;
 const Image = styled.img`
   display: block;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   object-fit: cover;
   object-position: center bottom;

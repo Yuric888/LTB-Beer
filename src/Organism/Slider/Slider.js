@@ -42,12 +42,13 @@ const Image = styled.img`
 `;
 var settings = {
   dots: false,
+  fade: true,
   infinite: true,
   speed: 2000,
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 5000,
+  autoplaySpeed: 4000,
 };
 const SlickComponent = () => {
   // const [hidePlay, setHidePlay] = useState(false);
