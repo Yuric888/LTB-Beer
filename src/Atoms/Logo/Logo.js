@@ -19,10 +19,13 @@ const textVariants = {
     transition: { duration: 2, delay: 1 },
   },
 };
+const handleClick = () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+};
 const Logo = () => {
   return (
     <Section>
-      <Link to="/">
+      <Link to="/" onClick={handleClick}>
         <motion.img
           variants={pathVariants}
           initial="hidden"

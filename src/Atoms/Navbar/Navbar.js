@@ -150,6 +150,9 @@ const Item = styled(motion.li)`
   padding: 0 20px;
   a.active {
     color: ${(props) => props.theme.text};
+    &::before {
+      transform: scale(1);
+    }
   }
   @media (max-width: 1079px) {
     font-size: ${(props) => props.theme.md};

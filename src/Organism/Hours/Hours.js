@@ -2,6 +2,7 @@ import styled from "styled-components";
 import img from "../../assets/images/beer-hours.png";
 import { dataHours } from "../../data/dataHours/dataHours";
 import gif from "../../assets/images/gif-beer.webp";
+import fb from "../../assets/svg/icon-facebook.svg";
 const Hours = () => {
   return (
     <Section>
@@ -28,10 +29,7 @@ const Hours = () => {
           <Right>
             <h2>follow us</h2>
             <Social>
-              <img
-                alt="Facebook"
-                src="https://static.xx.fbcdn.net/rsrc.php/yD/r/d4ZIVX-5C-b.ico"
-              />
+              <img alt="Facebook" src={fb} />
               <img
                 alt="instagram"
                 src="https://static.cdninstagram.com/rsrc.php/v3/yb/r/lswP1OF1o6P.png"
